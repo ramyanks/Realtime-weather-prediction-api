@@ -58,8 +58,8 @@ def model_and_evaluate(X_train, X_test, y_train, y_test):
     
     with open("outputs/metrics.json", "w") as f:
         json.dump(metrics, f, indent=2)
-    return
+    return MAE
 
 if __name__=="__main__":
     X_train, X_test, y_train, y_test = read_and_process_data()
-    model_and_evaluate(X_train, X_test, y_train, y_test)
+    MAE = model_and_evaluate(X_train, X_test, y_train, y_test)
